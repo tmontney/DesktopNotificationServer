@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{68FDB30F-EF9F-4368-BBDB-2167A89ACB8E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>DesktopNotificationServer.placeholder</StartupObject>
+    <StartupObject>DesktopNotificationServer.NotifyWindow</StartupObject>
     <RootNamespace>DesktopNotificationServer</RootNamespace>
     <AssemblyName>DesktopNotificationServer</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -54,17 +54,10 @@
       <HintPath>..\packages\Grapevine.4.1.1.0\lib\net40\Grapevine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -78,7 +71,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main.vb" />
+    <Compile Include="Controller\Routes.vb" />
+    <Compile Include="Controller\Server.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -94,11 +88,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Notification.vb" />
-    <Compile Include="placeholder.Designer.vb">
-      <DependentUpon>placeholder.vb</DependentUpon>
+    <Compile Include="Model\Notification.vb" />
+    <Compile Include="View\NotifyWindow.Designer.vb">
+      <DependentUpon>NotifyWindow.vb</DependentUpon>
     </Compile>
-    <Compile Include="placeholder.vb">
+    <Compile Include="View\NotifyWindow.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -109,8 +103,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="placeholder.resx">
-      <DependentUpon>placeholder.vb</DependentUpon>
+    <EmbeddedResource Include="View\NotifyWindow.resx">
+      <DependentUpon>NotifyWindow.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
