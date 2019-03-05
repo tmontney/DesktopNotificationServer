@@ -16,3 +16,5 @@ Usage:
     "body": "Hello World!",
     "severity": 1
     }
+
+Note: At this time, clicking the notification isn't terribly useful. Once it's dismissed, clicking does nothing. The Action Center and Balloon Tips are not connected to each other.
